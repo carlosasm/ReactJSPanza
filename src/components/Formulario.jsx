@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import * as ReactBootstrap from 'react-bootstrap'
 
 const Formulario = () => {
 
@@ -8,11 +9,11 @@ const Formulario = () => {
     const validar = (event) => {
         event.preventDefault()
         console.log('Boton pulsado')
-        if(!hostName.trim()){
+        if (!hostName.trim()) {
             console.log("Nombre Vacio")
             return
         }
-        if(!phoneNumber.trim()){
+        if (!phoneNumber.trim()) {
             console.log("Telefono Vacio")
             return
         }
@@ -26,11 +27,11 @@ const Formulario = () => {
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="form-label" for="hostName">Host Name</label>
-                            <input type="text" id="hostName" class="form-control" placeholder="My Name" onChange={ (e) => {setHostName(e.target.value)}}/>
+                            <input type="text" id="hostName" class="form-control" placeholder="My Name" onChange={(e) => { setHostName(e.target.value) }} />
                         </div>
                         <div class="form-group col-md-6">
                             <label class="form-label" for="phoneNumber">Host Phone Number</label>
-                            <input type="text" id="phoneNumber" class="form-control" placeholder="00000000" onChange={ (e) => {setPhoneNumber(e.target.value)}}/>
+                            <input type="text" id="phoneNumber" class="form-control" placeholder="00000000" onChange={(e) => { setPhoneNumber(e.target.value) }} />
                         </div>
                     </div>
                     <div className="form-group col-md-2"><h5>Location</h5></div>
@@ -48,7 +49,7 @@ const Formulario = () => {
                         <label class="form-label" for="hostDescription">Host Description</label>
                         <textarea class="form-control" id="hostDescription" rows="4" placeholder="Host Description"></textarea>
                     </div>
-                    <div>
+                    <div className="form-group">
                         <div className="form-group col-md-3"><h5>Payment Methods</h5></div>
                         <div class="form-row">
                             <div class="form-group col-md-4 custom-control custom-switch">
@@ -98,7 +99,15 @@ const Formulario = () => {
                     </div>
                     <div className="form-group col-md-3"><h5>Background Image</h5></div>
                     <div class="form-group mb-3">
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" />
+                        <ReactBootstrap.Form.File id="formcheck-api-custom" custom>
+                            <ReactBootstrap.Form.File.Input isValid />
+                            <ReactBootstrap.Form.File.Label data-browse="Browse">
+                                Select an image
+                            </ReactBootstrap.Form.File.Label>
+                            {/**<ReactBootstrap.Form.Control.Feedback type="valid">You did it!</ReactBootstrap.Form.Control.Feedback> */}
+                        </ReactBootstrap.Form.File>
+
+                        {/**<input type="file" class="form-control-file" id="exampleFormControlFile1" /> */}
                     </div>
                     <div className="form-outline mb-4">
                         <button type="submit" class="btn btn-info btn-block mb-4">Create Host</button>
