@@ -1,39 +1,40 @@
 import React from 'react'
-import * as ReactBootstrap from 'react-bootstrap'
+import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
 
 const Inicio = () => {
     return (
         <div>
-            <ReactBootstrap.Navbar bg="dark" variant="dark" expand="md">
-                <ReactBootstrap.Navbar.Brand href="#home">Panza Admin</ReactBootstrap.Navbar.Brand>
-                <ReactBootstrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <ReactBootstrap.Navbar.Collapse id="responsive-navbar-nav">
-                    <ReactBootstrap.Nav className="mr-auto">
-                        <ReactBootstrap.Nav.Link href="#home">Home</ReactBootstrap.Nav.Link>
-                        <ReactBootstrap.NavDropdown title="Host" id="collasible-nav-dropdown">
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.1">New Host</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.2">Update Host</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.3">Delete Host</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.3">List Hosts</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Divider />
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.4">Separated link</ReactBootstrap.NavDropdown.Item>
-                        </ReactBootstrap.NavDropdown>
-                        <ReactBootstrap.NavDropdown title="Menu" id="collasible-nav-dropdown">
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.1">New Menu</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.2">New Item</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.3">Update Item</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.3">Delete Item</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.3">List Items from Host</ReactBootstrap.NavDropdown.Item>
-                            <ReactBootstrap.NavDropdown.Divider />
-                            <ReactBootstrap.NavDropdown.Item href="#action/3.4">Separated link</ReactBootstrap.NavDropdown.Item>
-                        </ReactBootstrap.NavDropdown>
-                    </ReactBootstrap.Nav>
-                    <ReactBootstrap.Form inline>
-                        <ReactBootstrap.FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <ReactBootstrap.Button variant="outline-success">Search</ReactBootstrap.Button>
-                    </ReactBootstrap.Form>
-                </ReactBootstrap.Navbar.Collapse>
-            </ReactBootstrap.Navbar>
+            
+            <Navbar bg="dark" variant="dark" expand="md">
+                <Navbar.Brand href="#home">Panza Admin</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <NavDropdown title="Host" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">New Host</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Update Host</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Delete Host</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">List Hosts</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Menu" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">New Menu</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">New Item</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Update Item</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Delete Item</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">List Items from Host</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                    <Form inline>
+                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                        <Button variant="outline-success">Search</Button>
+                    </Form>
+                </Navbar.Collapse>
+            </Navbar>
             {/**
              * <div>
                 <ReactBootstrap.Form>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import * as ReactBootstrap from 'react-bootstrap'
+import {Form} from 'react-bootstrap'
 
 const Formulario = () => {
 
@@ -21,9 +21,10 @@ const Formulario = () => {
 
     return (
         <div className="container">
+            <br></br>
             <div>
                 <form onSubmit={validar}>
-                    <div className="form-group col-md-2"><h4>New Host</h4></div>
+                    <div className="form-group col-md-2"><h4>New Host</h4></div><br/>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="form-label" for="hostName">Host Name</label>
@@ -49,7 +50,7 @@ const Formulario = () => {
                         <label class="form-label" for="hostDescription">Host Description</label>
                         <textarea class="form-control" id="hostDescription" rows="4" placeholder="Host Description"></textarea>
                     </div>
-                    <div className="form-group">
+                    <div className="form-check">
                         <div className="form-group col-md-3"><h5>Payment Methods</h5></div>
                         <div class="form-row">
                             <div class="form-group col-md-4 custom-control custom-switch">
@@ -80,11 +81,11 @@ const Formulario = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="form-check">
                         <div className="form-group col-md-3"><h5>Delivery Options</h5></div>
                         <div class="form-row">
                             <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch7" />
+                                <input type="checkbox" class="custom-control-input" id="customSwitch7"/>
                                 <label class="custom-control-label" for="customSwitch7">Dine In</label>
                             </div>
                             <div class="form-group col-md-4 custom-control custom-switch">
@@ -99,13 +100,13 @@ const Formulario = () => {
                     </div>
                     <div className="form-group col-md-3"><h5>Background Image</h5></div>
                     <div class="form-group mb-3">
-                        <ReactBootstrap.Form.File id="formcheck-api-custom" custom>
-                            <ReactBootstrap.Form.File.Input isValid />
-                            <ReactBootstrap.Form.File.Label data-browse="Browse">
+                        <Form.File id="formcheck-api-custom" custom>
+                            <Form.File.Input isValid />
+                            <Form.File.Label data-browse="Browse">
                                 Select an image
-                            </ReactBootstrap.Form.File.Label>
+                            </Form.File.Label>
                             {/**<ReactBootstrap.Form.Control.Feedback type="valid">You did it!</ReactBootstrap.Form.Control.Feedback> */}
-                        </ReactBootstrap.Form.File>
+                        </Form.File>
 
                         {/**<input type="file" class="form-control-file" id="exampleFormControlFile1" /> */}
                     </div>
