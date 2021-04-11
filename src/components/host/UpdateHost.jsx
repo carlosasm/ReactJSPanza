@@ -37,7 +37,7 @@ const UpdateHost = () => {
                                 <td>2</td>
                                 <td id="f2">Jane</td>
                                 <td id="l2">Wick</td>
-                                <td id="m2">Doe</td>
+                                <td id="m2">Doee</td>
                                 <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="2" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
                                 <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="2" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
                             </tr>
