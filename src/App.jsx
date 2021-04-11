@@ -1,18 +1,21 @@
 import './App.css';
 import Formulario from './components/Formulario';
-import ListHosts from './components/ListHosts';
+import Inicio from './components/Inicio';
+import LeftSide from './components/login/LeftSide';
+import RigthSide from './components/login/RigthSide';
+import {Row, Col} from 'react-bootstrap'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from 'react-router-dom'
-import Inicio from './components/Inicio';
+import UpdateHost from './components/host/UpdateHost';
+
 
 function App() {
   return (
     <Router>
-      
 
       <Switch>
         <Route path="/inicio">
@@ -20,7 +23,13 @@ function App() {
           <Formulario></Formulario>
         </Route>
         <Route exact path="/">
-          <ListHosts></ListHosts>
+          <Row className="landing">
+            <Col><LeftSide></LeftSide></Col>
+            <Col><RigthSide></RigthSide></Col>
+          </Row>
+        </Route>
+        <Route path="/update">
+          <UpdateHost></UpdateHost>
         </Route>
       </Switch>
     </Router>
