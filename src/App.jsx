@@ -11,6 +11,8 @@ import {
   Link
 } from 'react-router-dom'
 import UpdateHost from './components/host/UpdateHost';
+import Menu from './components/Menu';
+import Login from './components/Login';
 
 
 function App() {
@@ -22,14 +24,12 @@ function App() {
           <Inicio></Inicio>
           <Formulario></Formulario>
         </Route>
-        <Route exact path="/">
-          <Row className="landing">
-            <Col><LeftSide></LeftSide></Col>
-            <Col><RigthSide></RigthSide></Col>
-          </Row>
-        </Route>
+        <Route exact path="/">{Login}</Route>
         <Route path="/update">
           <UpdateHost></UpdateHost>
+        </Route>
+        <Route path="/menu">
+          <Menu></Menu>
         </Route>
       </Switch>
     </Router>

@@ -14,8 +14,6 @@ const ListHosts = () => {
     return (
         <div>
         
-      
-
             <div>
                 <h1>Inicio</h1>
                 {nombre}

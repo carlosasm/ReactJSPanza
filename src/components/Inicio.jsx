@@ -1,5 +1,6 @@
 import React from 'react'
 import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
+import Formulario from './Formulario'
 
 const Inicio = () => {
     return (

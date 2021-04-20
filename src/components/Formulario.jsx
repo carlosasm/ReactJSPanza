@@ -25,81 +25,84 @@ const Formulario = () => {
             <div>
                 <form onSubmit={validar}>
                     <div className="form-group col-md-2"><h4>New Host</h4></div><br/>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="hostName">Host Name</label>
-                            <input type="text" id="hostName" class="form-control" placeholder="My Name" onChange={(e) => { setHostName(e.target.value) }} />
+                    <div className="form-row">
+                        <div className="form-group col-md-6">
+                            <label className="form-label" for="hostName">Host Name</label>
+                            <input type="text" id="hostName" className="form-control" placeholder="My Name" onChange={(e) => { setHostName(e.target.value) }} />
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="form-label" for="phoneNumber">Host Phone Number</label>
-                            <input type="text" id="phoneNumber" class="form-control" placeholder="00000000" onChange={(e) => { setPhoneNumber(e.target.value) }} />
+                            <label className="form-label" for="phoneNumber">Host Phone Number</label>
+                            <input type="text" id="phoneNumber" className="form-control" placeholder="00000000" onChange={(e) => { setPhoneNumber(e.target.value) }} />
                         </div>
                     </div>
                     <div className="form-group col-md-2"><h5>Location</h5></div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="hostName">Latitude</label>
-                            <input type="text" id="hostName" class="form-control" placeholder="9.887663" />
+                    <div className="form-row">
+                        <div className="form-group col-md-6">
+                            <label className="form-label" for="hostName">Latitude</label>
+                            <input type="text" id="hostName" className="form-control" placeholder="9.887663" />
                         </div>
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="phoneNumber">Longitude</label>
-                            <input type="text" id="phoneNumber" class="form-control" placeholder="-83.704895" />
+                        <div className="form-group col-md-6">
+                            <label className="form-label" for="phoneNumber">Longitude</label>
+                            <input type="text" id="phoneNumber" className="form-control" placeholder="-83.704895" />
                         </div>
                     </div>
-                    <div class="form-group mb-3">
-                        <label class="form-label" for="hostDescription">Host Description</label>
-                        <textarea class="form-control" id="hostDescription" rows="4" placeholder="Host Description"></textarea>
+                    <div className="form-group mb-3">
+                        <label className="form-label" for="hostDescription">Host Description</label>
+                        <textarea className="form-control" id="hostDescription" rows="4" placeholder="Host Description"></textarea>
                     </div>
+                    {/** 
                     <div className="form-check">
                         <div className="form-group col-md-3"><h5>Payment Methods</h5></div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch1" />
-                                <label class="custom-control-label" for="customSwitch1">Colones</label>
+                        <div className="form-row">
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch1" />
+                                <label className="custom-control-label" for="customSwitch1">Colones</label>
                             </div>
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch2" />
-                                <label class="custom-control-label" for="customSwitch2">Dolares</label>
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch2" />
+                                <label className="custom-control-label" for="customSwitch2">Dolares</label>
                             </div>
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch3" />
-                                <label class="custom-control-label" for="customSwitch3">Sinpe</label>
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch3" />
+                                <label className="custom-control-label" for="customSwitch3">Sinpe</label>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch4" />
-                                <label class="custom-control-label" for="customSwitch4">PayPal</label>
+                        <div className="form-row">
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch4" />
+                                <label className="custom-control-label" for="customSwitch4">PayPal</label>
                             </div>
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch5" />
-                                <label class="custom-control-label" for="customSwitch5">Mastercard</label>
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch5" />
+                                <label className="custom-control-label" for="customSwitch5">Mastercard</label>
                             </div>
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch6" />
-                                <label class="custom-control-label" for="customSwitch6">Visa</label>
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch6" />
+                                <label className="custom-control-label" for="customSwitch6">Visa</label>
                             </div>
                         </div>
                     </div>
                     <div className="form-check">
                         <div className="form-group col-md-3"><h5>Delivery Options</h5></div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch7"/>
-                                <label class="custom-control-label" for="customSwitch7">Dine In</label>
+                        <div className="form-row">
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch7"/>
+                                <label className="custom-control-label" for="customSwitch7">Dine In</label>
                             </div>
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch8" />
-                                <label class="custom-control-label" for="customSwitch8">Express</label>
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch8" />
+                                <label className="custom-control-label" for="customSwitch8">Express</label>
                             </div>
-                            <div class="form-group col-md-4 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch9" />
-                                <label class="custom-control-label" for="customSwitch9">Pick Up</label>
+                            <div className="form-group col-md-4 custom-control custom-switch">
+                                <input type="checkbox" className="custom-control-input" id="customSwitch9" />
+                                <label className="custom-control-label" for="customSwitch9">Pick Up</label>
                             </div>
                         </div>
                     </div>
+
+                    */}
                     <div className="form-group col-md-3"><h5>Background Image</h5></div>
-                    <div class="form-group mb-3">
+                    <div className="form-group mb-3">
                         <Form.File id="formcheck-api-custom" custom>
                             <Form.File.Input isValid />
                             <Form.File.Label data-browse="Browse">
@@ -111,7 +114,7 @@ const Formulario = () => {
                         {/**<input type="file" class="form-control-file" id="exampleFormControlFile1" /> */}
                     </div>
                     <div className="form-outline mb-4">
-                        <button type="submit" class="btn btn-info btn-block mb-4">Create Host</button>
+                        <button type="submit" className="btn btn-info btn-block mb-4">Create Host</button>
                     </div>
                 </form>
             </div>

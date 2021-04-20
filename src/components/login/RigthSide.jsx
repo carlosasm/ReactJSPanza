@@ -1,16 +1,17 @@
 import React, {useState} from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { auth } from '../../firebaseconfig'
+import {useHistory} from 'react-router-dom'
 
 const RigthSide = () => {
 
-    
+    const history = useHistory()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [msgError, setMsgError] = useState('')
 
     const validar = (event) => {
-        
+        console.log("validar")
         try {
             event.preventDefault()
             auth.signInWithEmailAndPassword(email, password)
@@ -26,11 +27,22 @@ const RigthSide = () => {
             if(error.code === 'auth/wrong-password'){
                 setMsgError('La contrase;a es incorrecta')
             }
-        }
-        
-                
+        }       
     }
-{/** onSubmit={validar}*/}
+
+    const login = () => {
+        auth.signInWithEmailAndPassword(email, password)
+        .then( (r) => {
+            history.push('/menu')
+        })
+        .catch( (err) => {
+        /** auth/wrong-password */
+        if(err.code === 'auth/wrong-password')
+            setMsgError("Wrong Password")
+        })
+    }
+
+/** onSubmit={validar}*/
     return (
         <div>
             <div>
@@ -46,10 +58,10 @@ const RigthSide = () => {
                     <Form.Group>
                         <Form.Label>Enter your password</Form.Label>
                         <Form.Control type="password" placeholder="Password" onChange={(e) => {setPassword(e.target.value)}} required/>
-                    </Form.Group><br/>
-                    {msgError !== '' ? (<div>{msgError}</div>) : (<span></span>)}
+                    </Form.Group>
+                    {msgError !== '' ? (<div>{msgError}</div>) : (<span></span>)}<br/>
                     <Form.Group>
-                        <Button variant="primary" className="btn btn-block">Login</Button>{' '}
+                        <Button onClick={login} variant="primary" className="btn btn-block">Login</Button>{' '}
                     </Form.Group>
                 </Form>
             </div>
